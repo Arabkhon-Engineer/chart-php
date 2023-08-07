@@ -1,9 +1,6 @@
 <?php
 require './dbconnect.php';
 require './header.php';
-
-
-
 try{
     $state = $conn->prepare("select chart_name, count from chart1");
     $state->execute();
@@ -13,7 +10,6 @@ try{
     echo $e->getMessage();
 }
 ?>
-<h1>chart</h1>
 <html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -44,7 +40,10 @@ try{
     </script>
   </head>
   <body>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
+
+
+
+
 <?php require './footer.php' ?>
